@@ -1,0 +1,20 @@
+git config --global http.proxy http://192.168.86.72:8080
+
+import torch
+
+x = torch.tensor([[1.0, 2.0], [3.0, 4.0]])
+print(x.shape)
+print(x.dtype)
+print(x + 1)
+print(x @ x)
+
+print(x.mean())
+print(x.sum(dim=0))
+
+torch.Size([2, 2])
+torch.float32
+tensor([2., 3.],
+        [4., 5.]])
+tensor([[ 7., 10.], [15., 22.]])
+tensor(2.5000)
+tensor([4., 6.])
